@@ -17,9 +17,9 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+/*
+Lexical scope - Nested functions have access to the variables and scope of the outer function, including the variables declared inside of the outer scope. 
+*/
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -30,10 +30,15 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let count = 0;
+  for(let i = 1; i <= number; i++){
+    count = count + i;
   }
+  return count;
+}
+
+console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
