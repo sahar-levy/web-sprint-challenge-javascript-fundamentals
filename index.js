@@ -67,10 +67,13 @@ const zooAnimals = [
 
   function animalNames(array){
     const displayNames = [];
-    // creates empty array
+    // creates empty array to store the array of strings
     array.forEach(animal => {
+      // .forEach() iterates over each object in the array
       const displayName = `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`;
+      //  using string interpolation, animal_name and scientific_name are stored in the variable displayName
       displayNames.push(displayName);
+      // properties are pushed into the empty array
     });
 
     return displayNames;
@@ -84,13 +87,18 @@ const zooAnimals = [
   2. Use .map() to create a new array of strings with the animal's names in lowercase
   3. Return the new array
   🌟 EXAMPLE of returned array: ['jackal, asiatic', .....]
-  💡 NOTE: Do some research for other methods that can help help you
+  💡 NOTE: Do some research for other methods that can help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCaseArray = array.map((element) => {
+      return element.animal_name.toLowerCase();
+    });
+
+    return lowerCaseArray;
   }
   
+  console.log('Task 2:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
