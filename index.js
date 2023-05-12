@@ -97,7 +97,7 @@ const zooAnimals = [
 
     return lowerCaseArray;
   }
-  
+
   console.log('Task 2:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -108,10 +108,11 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const lowPopulationArray = array.filter(item => item.population < 5);
+    return lowPopulationArray;
   }
-  
+  console.log('Task 3:', lowPopulationAnimals(zooAnimals));
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
